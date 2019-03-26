@@ -41,3 +41,7 @@ allure {
 test {
     useJUnit()
 }
+
+task generateAllureReport(type: Exec) {
+    commandLine "allure", "generate build/allure-results"
+}
